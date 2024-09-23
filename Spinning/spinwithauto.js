@@ -16,4 +16,4 @@ function moveDiv() {
 }
 
 // Move the div every 1 second (1000ms)
-setInterval(moveDiv, 1000);
+setInterval(moveDiv, 3000);
