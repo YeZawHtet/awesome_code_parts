@@ -1,0 +1,39 @@
+/* Basic setup for body */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  /* Blob shape */
+  .blob {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #ff6b6b, #ffcc00); /* Color gradient */
+    border-radius: 50%;
+    animation: morph 8s infinite ease-in-out;
+  }
+  
+  /* Keyframes for blob animation */
+  @keyframes morph {
+    0% {
+      border-radius: 50% 50% 40% 60% / 60% 50% 50% 40%;
+    }
+    25% {
+      border-radius: 40% 60% 60% 40% / 50% 60% 40% 50%;
+    }
+    50% {
+      border-radius: 60% 40% 50% 50% / 50% 40% 60% 60%;
+    }
+    75% {
+      border-radius: 50% 60% 40% 50% / 60% 50% 50% 40%;
+    }
+    100% {
+      border-radius: 50% 50% 40% 60% / 60% 50% 50% 40%;
+    }
+  }
+  
