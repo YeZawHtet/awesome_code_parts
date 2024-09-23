@@ -1,0 +1,36 @@
+/* General container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* 3D Button Styling */
+  .btn-3d {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px #2e7d32; /* Initial shadow for the 3D effect */
+    transition: all 0.2s ease;
+  }
+  
+  /* Hover effect to give a 3D pressed button look */
+  .btn-3d:hover {
+    transform: translateY(-5px); /* Move the button up */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2); /* Bigger shadow for depth */
+  }
+  
+  /* When active (clicked), the button appears pressed */
+  .btn-3d:active {
+    transform: translateY(2px); /* Slight downward push */
+    box-shadow: 0 3px #2e7d32; /* Smaller shadow to simulate press */
+  }
+  
