@@ -1,0 +1,52 @@
+/* Background Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* A colorful gradient background to enhance the frosted glass effect */
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #141414 0%, #fad0c4 99%, #fad0c4 100%);
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  /* Glass card styling */
+  .glass-card {
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* The blur effect creating the frosted glass look */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft inner border */
+    text-align: center;
+    color: #fff; /* White text color */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect for glass card */
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.3); /* Increase transparency on hover */
+    backdrop-filter: blur(15px); /* Increase blur on hover */
+  }
+  
+  /* Text styling inside the glass card */
+  .glass-card h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .glass-card p {
+    font-size: 16px;
+  }
+  

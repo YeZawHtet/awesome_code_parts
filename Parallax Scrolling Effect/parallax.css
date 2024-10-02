@@ -1,0 +1,65 @@
+/* Reset body margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Parallax sections styling */
+  .parallax {
+    height: 100vh; /* Full screen height */
+    background-attachment: fixed; /* Fixed background for the parallax effect */
+    background-size: cover; /* Ensure background covers the entire section */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Specific background images for each parallax section */
+  .parallax-1 {
+    background-image: url('https://via.placeholder.com/1920x1080/3498db/ffffff?text=Parallax+1'); /* Replace with your own image */
+  }
+  
+  .parallax-2 {
+    background-image: url('https://via.placeholder.com/1920x1080/2ecc71/ffffff?text=Parallax+2');
+  }
+  
+  .parallax-3 {
+    background-image: url('https://via.placeholder.com/1920x1080/e74c3c/ffffff?text=Parallax+3');
+  }
+  
+  /* Content styling inside parallax sections */
+  .parallax .content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Regular content sections */
+  .content-section {
+    padding: 60px 20px;
+    background: #f4f4f4;
+  }
+  
+  .content-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .content-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .parallax {
+      background-attachment: scroll; /* Disable parallax on mobile for better performance */
+    }
+  }
+  

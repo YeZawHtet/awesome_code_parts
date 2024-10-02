@@ -1,0 +1,14 @@
+body{
+    background-color: bisque;
+  }
+  .blend-container{
+    position: relative;
+  }
+  .with-background{
+    width: 400px;
+  }
+  .hide-background{
+    width: 400px;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+  }

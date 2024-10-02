@@ -1,0 +1,94 @@
+/* Circle Spinner */
+.spinner-circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Light border */
+    border-top: 5px solid #3498db; /* Dark border on top */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Continuous spin */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* bar spinner */
+
+/* Bar Spinner */
+.spinner-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+  }
+  
+  .bar {
+    width: 8px;
+    height: 100%;
+    background-color: #3498db;
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  
+  .bar:nth-child(2) {
+    animation-delay: -1.1s;
+  }
+  .bar:nth-child(3) {
+    animation-delay: -1s;
+  }
+  .bar:nth-child(4) {
+    animation-delay: -0.9s;
+  }
+  .bar:nth-child(5) {
+    animation-delay: -0.8s;
+  }
+  
+  @keyframes bounce {
+    0%, 40%, 100% {
+      transform: scaleY(1);
+    }
+    20% {
+      transform: scaleY(2);
+    }
+  }
+  
+  /* Bouncing Dots Spinner */
+
+  /* Bouncing Dots Spinner */
+.spinner-dots {
+    display: flex;
+    justify-content: space-around;
+    width: 80px;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: bounce-dots 0.6s infinite alternate;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes bounce-dots {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+  

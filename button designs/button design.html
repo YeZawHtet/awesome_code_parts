@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15 Awesome Button Designs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+      flex-wrap: wrap;
+    }
+    button {
+      margin: 10px;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* Button 1: Simple Hover Effect */
+    .btn1 {
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+    }
+    .btn1:hover {
+      background-color: #2980b9;
+    }
+
+    /* Button 2: Slide Underline */
+    .btn2 {
+      background: none;
+      color: #3498db;
+      border: 2px solid #3498db;
+      position: relative;
+    }
+    .btn2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #3498db;
+      transition: all 0.3s;
+    }
+    .btn2:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* Button 3: Floating */
+    .btn3 {
+      background-color: #2ecc71;
+      color: white;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .btn3:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Button 4: Neon Glow */
+    .btn4 {
+      background-color: #e74c3c;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c;
+    }
+    .btn4:hover {
+      box-shadow: 0 0 20px #e74c3c, 0 0 30px #e74c3c;
+    }
+
+    /* Button 5: Borderless Ripple */
+    .btn5 {
+      position: relative;
+      overflow: hidden;
+      background-color: #9b59b6;
+      color: white;
+    }
+    .btn5:hover::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200%;
+      padding-bottom: 200%;
+      background: rgba(255, 255, 255, 0.4);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      animation: ripple 0.6s linear;
+    }
+    @keyframes ripple {
+      from { transform: scale(0); opacity: 1; }
+      to { transform: scale(1); opacity: 0; }
+    }
+
+    /* Button 6: Flip Effect */
+    .btn6 {
+      perspective: 1000px;
+    }
+    .btn6 span {
+      display: inline-block;
+      transition: transform 0.5s;
+    }
+    .btn6:hover span {
+      transform: rotateX(360deg);
+    }
+
+    /* Button 7: Gradient Background */
+    .btn7 {
+      background-image: linear-gradient(45deg, #f39c12, #d35400);
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* Button 8: Skewed */
+    .btn8 {
+      background-color: #1abc9c;
+      color: white;
+      transform: skewX(-20deg);
+    }
+
+    /* Button 9: Text Shadow */
+    .btn9 {
+      background-color: #34495e;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Button 10: Bordered Hover */
+    .btn10 {
+      background-color: white;
+      color: #2c3e50;
+      border: 2px solid #2c3e50;
+      position: relative;
+    }
+    .btn10:hover {
+      color: white;
+      background-color: #2c3e50;
+    }
+
+    /* Button 11: Bubble Effect */
+    .btn11 {
+      background-color: #8e44ad;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn11::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s, height 0.4s;
+    }
+    .btn11:hover::before {
+      width: 400%;
+      height: 400%;
+    }
+
+    /* Button 12: Inner Border */
+    .btn12 {
+      border: 3px solid transparent;
+      padding: 15px 25px;
+      background-clip: padding-box;
+      background-color: #27ae60;
+      color: white;
+    }
+    .btn12:hover {
+      background-color: transparent;
+      border-color: #27ae60;
+      color: #27ae60;
+    }
+
+    /* Button 13: Shake Effect */
+    .btn13:hover {
+      animation: shake 0.3s linear;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+    }
+
+    /* Button 14: Glow on Hover */
+    .btn14 {
+      background-color: #f39c12;
+      color: white;
+      border-radius: 25px;
+      box-shadow: 0 0 5px #f39c12;
+    }
+    .btn14:hover {
+      box-shadow: 0 0 20px #f39c12, 0 0 40px #f39c12;
+    }
+
+    /* Button 15: Split Color */
+    .btn15 {
+      background-image: linear-gradient(90deg, #16a085 50%, #2ecc71 50%);
+      background-size: 200% 100%;
+      background-position: right;
+      color: white;
+    }
+    .btn15:hover {
+      background-position: left;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn1">Button 1</button>
+  <button class="btn2">Button 2</button>
+  <button class="btn3">Button 3</button>
+  <button class="btn4">Button 4</button>
+  <button class="btn5">Button 5</button>
+  <button class="btn6"><span>Button 6</span></button>
+  <button class="btn7">Button 7</button>
+  <button class="btn8">Button 8</button>
+  <button class="btn9">Button 9</button>
+  <button class="btn10">Button 10</button>
+  <button class="btn11">Button 11</button>
+  <button class="btn12">Button 12</button>
+  <button class="btn13">Button 13</button>
+  <button class="btn14">Button 14</button>
+  <button class="btn15">Button 15</button>
+</body>
+</html>

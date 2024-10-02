@@ -1,0 +1,26 @@
+#anchor-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    anchor-name: --anchor-1;
+  }
+  
+  #anchor-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    rotate: 180deg;
+    anchor-name: --anchor-2;
+  }
+  
+  .target {
+    /* background-image: url("https://assets.codepen.io/3/stretch-armstrong.png"); */
+    background-image: url("../img/Ye\ Zaw\ Htet.jpg");
+    background-size: 100% 100%;
+    position: absolute;
+    
+    top: anchor(--anchor-1 bottom);
+    left: anchor(--anchor-1 right);
+    bottom: anchor(--anchor-2 top);
+    right: anchor(--anchor-2 left);
+  }
